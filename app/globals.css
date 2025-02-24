@@ -2,7 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  
-} */
-
+:root {
+  /* colors */
+  --light-silver: #d1d5db;
+  --sonic-silver: #7b7373;
+}

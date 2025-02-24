@@ -10,8 +10,12 @@ const config = {
     extend: {
       fontFamily: {
         lato: "var(--font-lato)",
-        'fira-sans': "var(--font-fira-sans)",
+        firaSans: "var(--font-fira-sans)",
       },
+      colors: {
+        lightSilver: "var(--light-silver)",
+        sonicSilver: "var(--sonic-silver)",
+      }
     },
   },
   plugins: [],

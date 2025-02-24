@@ -1,5 +1,6 @@
 import { Lato, Fira_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import Header from '@/components/Header';
 
 import './globals.css';
 
@@ -25,11 +26,12 @@ export default function RootLayout({ children }) {
     <html lang="pl">
       <body
         className={cn(
-          'antialiased font-lato',
+          'antialiased font-lato max-w-[1400px] mx-auto',
           lato.variable,
           firaSans.variable
         )}
       >
+        <Header />
         {children}
       </body>
     </html>
