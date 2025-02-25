@@ -15,6 +15,9 @@ const config = {
       colors: {
         lightSilver: "var(--light-silver)",
         sonicSilver: "var(--sonic-silver)",
+        lotion: "var(--lotion)",
+        green: "var(--green)",
+        castletonGreen: "var(--castleton-green)",
       }
     },
   },
