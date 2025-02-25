@@ -8,7 +8,7 @@ const SearchInput = ({ onChange, value, className, ...props }) => {
     <div className={cn('relative', className)}>
       <FormInput
         type="search"
-        className='rounded-full pr-14'
+        className='rounded-full pr-11'
         value={value}
         onChange={onChange}
         {...props}

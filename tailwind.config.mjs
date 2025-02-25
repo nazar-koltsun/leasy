@@ -18,6 +18,11 @@ const config = {
         lotion: "var(--lotion)",
         green: "var(--green)",
         castletonGreen: "var(--castleton-green)",
+      },
+      screens: {
+        'max-1250': { max: '1250px' },
+        'max-1100': { max: '1100px' },
+        'max-620': { max: '620px' },
       }
     },
   },
