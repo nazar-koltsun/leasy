@@ -7,6 +7,35 @@
   --light-silver: #d1d5db;
   --lotion: #fcfcfc;
   --sonic-silver: #7b7373;
+  --dark-slate-gray: #3b505a;
+  --bright-gray: #e5e7eb;
   --green: #15a46d;
   --castleton-green: #075a39;
+  --chinese-black: #111111;
+}
+
+input[type='checkbox'] {
+  position: relative;
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  border: 1px solid var(--light-silver);
+  border-radius: 4px;
+}
+
+input[type='checkbox']::before {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  clip-path: polygon(20% 50%, 40% 70%, 85% 15%, 100% 30%, 40% 90%, 10% 60%);
+  transform: translate(-50%, -50%);
+  background-color: var(--castleton-green);
+}
+
+input[type='checkbox']:checked::before {
+  opacity: 1;
 }
