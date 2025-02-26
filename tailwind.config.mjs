@@ -24,7 +24,9 @@ const config = {
       },
       screens: {
         'max-1250': { max: '1250px' },
+        'max-1180': { max: '1180px' },
         'max-1100': { max: '1100px' },
+        'max-768': { max: '768px' },
         'max-620': { max: '620px' },
       },
       boxShadow: {
