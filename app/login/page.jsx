@@ -11,7 +11,7 @@ import GoogleIcon from '@/assets/google.png';
 const LoginPage = () => {
   return (
     <div className="px-4">
-      <Card className="max-w-[600px] mx-auto mt-11 pt-6 pb-9 px-24">
+      <Card className="max-w-[600px] mx-auto mt-11 pt-6 pb-9 px-24 max-620:px-4 max-620:pt-3 max-620:pb-5 max-620:mt-5">
         <FormTitle>Zaloguj się</FormTitle>
 
         <p className="mt-3 text-darkSlateGray">
