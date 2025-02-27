@@ -24,7 +24,7 @@ const Header = ({ isDashboard = false, isAuth = false, className }) => {
   return (
     <header
       className={cn(
-        'relative p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-col',
+        'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-col',
         className
       )}
     >

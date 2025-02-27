@@ -11,6 +11,7 @@ const config = {
       fontFamily: {
         lato: "var(--font-lato)",
         firaSans: "var(--font-fira-sans)",
+        poppins: "var(--font-poppins)",
       },
       colors: {
         lightSilver: "var(--light-silver)",
@@ -22,11 +23,13 @@ const config = {
         darkSlateGray: "var(--dark-slate-gray)",
         brightGray: "var(--bright-gray)",
         fireOpal: "var(--fire-opal)",
+        rhythm: "var(--rhythm)",
       },
       screens: {
         'max-1250': { max: '1250px' },
         'max-1180': { max: '1180px' },
         'max-1100': { max: '1100px' },
+        'max-1024': { max: '1024px' },
         'max-768': { max: '768px' },
         'max-700': { max: '700px' },
         'max-620': { max: '620px' },
