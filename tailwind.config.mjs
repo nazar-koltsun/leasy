@@ -21,16 +21,19 @@ const config = {
         chineseBlack: "var(--chinese-black)",
         darkSlateGray: "var(--dark-slate-gray)",
         brightGray: "var(--bright-gray)",
+        fireOpal: "var(--fire-opal)",
       },
       screens: {
         'max-1250': { max: '1250px' },
         'max-1180': { max: '1180px' },
         'max-1100': { max: '1100px' },
         'max-768': { max: '768px' },
+        'max-700': { max: '700px' },
         'max-620': { max: '620px' },
       },
       boxShadow: {
         cardShadow: '0 30px 60px 0 rgba(0, 19, 87, 0.06)',
+        doobleSmallShadow: '0 2px 4px 0 rgba(35, 38, 59, 0.1), 0 0 0 1px rgba(35, 38, 59, 0.05);',
       }
     },
   },
