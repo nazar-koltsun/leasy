@@ -1,21 +1,8 @@
-import { Lato, Fira_Sans } from 'next/font/google';
 import { cn } from '@/lib/utils';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-
-import './globals.css';
-
-const lato = Lato({
-  variable: '--font-lato',
-  weight: ['400', '700'],
-  subsets: ['latin'],
-});
-
-const firaSans = Fira_Sans({
-  variable: '--font-fira-sans',
-  weight: ['400', '500'],
-  subsets: ['latin'],
-});
+import { lato, firaSans } from '@/lib/fonts';
+import '@/app/globals.css';
 
 export const metadata = {
   title: 'LEASY',

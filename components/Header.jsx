@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import Logo from '@/assets/logo.png';
 import SearchInput from '@/components/SearchInput';
@@ -6,10 +7,17 @@ import BurgerIcon from '@/components/icons/BurgerIcon';
 import UserIcon from '@/components/icons/UserIcon';
 import LockIcon from '@/components/icons/LockIcon';
 
-const Header = () => {
+const Header = ({ className }) => {
   return (
-    <header className="relative p-4 flex justify-between items-center max-1100:flex-wrap max-620:flex-col">
-      <Image src={Logo} width={145} height={54} className='order-1' priority alt="Logo" />
+    <header className={cn("relative p-4 flex justify-between items-center max-1100:flex-wrap max-620:flex-col", className)}>
+      <Image
+        src={Logo}
+        width={145}
+        height={54}
+        className="order-1"
+        priority
+        alt="Logo"
+      />
 
       <SearchInput
         className="w-[450px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 order-2
