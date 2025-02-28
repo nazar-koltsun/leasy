@@ -11,7 +11,6 @@ import AvatarSeven from '@/assets/avatars/avatar-7.png';
 import AvatarEight from '@/assets/avatars/avatar-8.png';
 import AvatarNine from '@/assets/avatars/avatar-9.png';
 
-
 const RENTALS_DATA = [
   {
     Nr: '1045',

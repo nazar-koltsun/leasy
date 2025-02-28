@@ -8,7 +8,7 @@ import SidebarNav from '@/components/SidebarNav';
 import AppsBanner from '@/components/AppsBanner';
 
 import BurgerIcon from '@/components/icons/BurgerIcon';
-import GoOutIcon from '@/components/icons/sidebar-nav-icons/GoOutIcon';
+import GoOutIcon from '@/components/icons/GoOutIcon';
 
 const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -29,7 +29,12 @@ const Sidebar = () => {
           !isSidebarOpen && 'max-1024:h-10 max-1024:w-10'
         )}
       >
-        <div className={cn('pt-6 px-4 pb-10 bg-white relative z-30', !isSidebarOpen && 'max-1024:hidden')}>
+        <div
+          className={cn(
+            'pt-6 px-4 pb-10 bg-white relative z-30',
+            !isSidebarOpen && 'max-1024:hidden'
+          )}
+        >
           <SidebarNav />
           <SidebarNavItem
             label="Wyloguj się"
