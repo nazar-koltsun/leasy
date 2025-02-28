@@ -1,6 +1,8 @@
 import DashboardPageTitle from '@/components/DashboardPageTitle';
 import SearchInput from '@/components/SearchInput';
 import Table from '@/components/Table';
+import Pagination from '@/components/Pagination';
+
 import AvatarOne from '@/assets/avatars/avatar-1.png';
 import AvatarTwo from '@/assets/avatars/avatar-2.png';
 import AvatarThree from '@/assets/avatars/avatar-3.png';
@@ -134,6 +136,8 @@ const DashboardMainPage = () => {
       </div>
 
       <Table data={RENTALS_DATA} className='mt-4' />
+
+      <Pagination totalItems={20} className='mt-8' />
     </div>
   );
 };
