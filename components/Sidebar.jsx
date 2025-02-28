@@ -15,12 +15,10 @@ const Sidebar = () => {
 
   const openSidebar = () => {
     setIsSidebarOpen(true);
-    // document.body.style.overflow = 'hidden';
   };
 
   const closeSidebar = () => {
     setIsSidebarOpen(false);
-    // document.body.style.overflow = 'auto';
   };
 
   return (
@@ -28,7 +26,7 @@ const Sidebar = () => {
       <aside
         className={cn(
           'relative z-40 row-start-2 col-start-1 col-end-2 bg-white max-1024:col-start-1 max-1024:w-[250px]',
-          !isSidebarOpen && 'max-1024:h-10'
+          !isSidebarOpen && 'max-1024:h-10 max-1024:w-10'
         )}
       >
         <div className={cn('pt-6 px-4 pb-10 bg-white relative z-30', !isSidebarOpen && 'max-1024:hidden')}>
@@ -43,7 +41,7 @@ const Sidebar = () => {
         </div>
 
         <Button
-          className="hidden max-1024:flex absolute z-20 top-0 left-4 p-0 hover:opacity-50 mb-4"
+          className="hidden w-8 h-8 max-1024:flex absolute z-20 top-0 left-4 p-0 hover:opacity-50 mb-4"
           variant="flat"
           onClick={openSidebar}
         >

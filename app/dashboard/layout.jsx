@@ -15,16 +15,16 @@ export default function RootLayout({ children }) {
     <html lang="pl">
       <body
         className={cn(
-          'antialiased font-lato max-w-[1400px] mx-auto flex flex-col h-screen',
+          'antialiased font-lato mx-auto flex flex-col h-screen',
           lato.variable,
           firaSans.variable,
           poppins.variable,
         )}
       >
-        <div className='grid grid-cols-[316px_1fr] grid-rows-[auto_1fr] max-1024:grid-cols-1 gap-x-9 h-screen max-1024:gap-0'>
+        <div className='grid grid-cols-[316px_1fr] grid-rows-[auto_1fr] max-1024:grid-cols-1 gap-x-4 h-screen max-1024:gap-0'>
           <Header isDashboard isAuth className='col-span-2' />
           <Sidebar />
-          <main className="relative px-4 pb-10 row-start-2 col-start-2 max-1024:col-start-1 max-1024:mt-14">{children}</main>
+          <main className="relative px-4 pt-8 pb-10 row-start-2 col-start-2 max-1024:col-start-1">{children}</main>
         </div>
       </body>
     </html>

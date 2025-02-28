@@ -6,14 +6,22 @@
   /* colors */
   --light-silver: #d1d5db;
   --lotion: #fcfcfc;
+  --anti-flash-white: #f1f1f1;
   --sonic-silver: #7b7373;
+  --rhythm: #737791;
+  --auro-metal: #6b7280;
   --dark-slate-gray: #3b505a;
   --bright-gray: #e5e7eb;
+  --blanched-almond: #ffefcf;
   --green: #15a46d;
+  --magic-mint: #b9f9cf;
   --castleton-green: #075a39;
   --chinese-black: #111111;
   --fire-opal: #eb5757;
-  --rhythm: #737791;
+  --philippine-green: #11843c;
+  --pale-pink: #f7d4d6;
+  --boston-university-red: #c50000;
+  --windsor-tan: #ab570a;
 }
 
 input[type='checkbox'] {

@@ -38,6 +38,7 @@ const Header = ({ isDashboard = false, isAuth = false, className }) => {
         max-1250:w-[300px] max-1100:w-full max-1100:mt-4 max-1100:relative max-1100:top-0 max-1100:left-0 
         max-1100:translate-x-0 max-1100:translate-y-0 max-1100:order-last"
         placeholder="Czego szukasz....?"
+        isSecondary
       />
 
       <div className={cn("flex gap-3 items-center order-3 max-700:mt-4 max-620:gap-3", isAuth && 'gap-5')}>

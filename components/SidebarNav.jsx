@@ -42,7 +42,6 @@ const NAV_LINKS = [
 
 const SidebarNav = () => {
   const pathname = usePathname();
-  console.log('pathname', pathname);
 
   return (
     <ul className='space-y-2'>
