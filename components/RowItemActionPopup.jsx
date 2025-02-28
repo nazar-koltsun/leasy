@@ -10,7 +10,7 @@ const RowItemActionPopup = ({ isLast }) => {
   return (
     <div
       className={cn(
-        'absolute z-10 right-4 top-full py-1.5 px-2 pl-3 space-y-[2px] border border-lightSilver rounded-xl bg-white',
+        'absolute z-10 right-4 top-full py-1.5 px-2 pl-3 space-y-[2px] border border-lightSilver rounded-xl bg-white max-620:right-0',
         isLast && '-top-16'
       )}
     >
