@@ -37,6 +37,7 @@ const config = {
         charlestonGreen: "var(--charleston-green)",
       },
       screens: {
+        'max-1400': { max: '1400px' },
         'max-1250': { max: '1250px' },
         'max-1180': { max: '1180px' },
         'max-1100': { max: '1100px' },
