@@ -1,6 +1,7 @@
 import { cn } from '@/lib/utils';
 import DashboardPageTitle from '@/components/DashboardPageTitle';
 import Button from '@/components/Button';
+import LenderInfoCard from '@/components/LenderInfoCard';
 
 import DangerIcon from '@/components/icons/DangerIcon';
 
@@ -41,6 +42,8 @@ const LenderDetails = ({ lenderData }) => {
           </Button>
         </div> 
       </div>
+
+      <LenderInfoCard lenderData={lenderData.lender} className='mt-8' />
     </div>
   );
 };

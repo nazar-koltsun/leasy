@@ -135,6 +135,15 @@ const LENDER_DATA = {
   product: 'SPORT CRUISER',
   status: 'Zakończono',
   order_date: '07.10.2024',
+  lender: {
+    name: 'Katarzyna Niedbała',
+    rating_score: 4.5,
+    reviews_count: 35,
+    used_leasy_from: 'Styczeń 2025',
+    location: 'Poznań, Wielkopolska',
+    languages: 'Polski & Angielski',
+    number_of_ads_posted: 127,
+  }
 }
 
 const DashboardMainPage = () => {
