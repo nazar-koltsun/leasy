@@ -9,7 +9,7 @@ import MessageIcon from '@/components/icons/MessageIcon';
 
 const SectionTitle = ({ title }) => {
   return (
-    <h2 className="text-xl text-richBlack leading-[26px] font-light tracking-tight">
+    <h2 className="text-xl text-richBlack leading-[26px] font-light tracking-tight max-1400:text-lg">
       {title}
     </h2>
   );
@@ -19,7 +19,7 @@ const ActionButton = ({ children }) => {
   return (
     <Button
       variant="flat"
-      className="text-lg font-normal text-rhythm hover:underline"
+      className="text-lg font-normal text-rhythm text-left hover:underline max-1400:text-base"
     >
       {children}
     </Button>
@@ -30,7 +30,7 @@ const DataField = ({ className, children }) => {
   return (
     <div
       className={cn(
-        'h-9 border-2 border-[#ddd] rounded-lg px-3 py-1 text-darkLiver',
+        'min-h-9 border-2 border-[#ddd] rounded-lg px-3 py-1 text-darkLiver max-1400:text-sm',
         className
       )}
     >
@@ -59,15 +59,15 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
 
   return (
     <div className={className}>
-      <Card>
-        <div className="flex gap-6">
-          <div className="w-1/2">
+      <Card className='max-700:px-4 max-700:pt-5 max-700:pb-4'>
+        <div className="flex gap-6 max-1250:flex-col">
+          <div className="w-1/2 max-1250:w-full">
             <div>
-              <div className="flex justify-between gap-4">
+              <div className="flex justify-between gap-1 flex-wrap">
                 <SectionTitle title="Przedmiot Wypożyczenia" />
 
                 <ActionButton>
-                  <StarIcon className="stroke-rhythm" /> Oceń Przedmiot
+                  <StarIcon className="stroke-rhythm max-1400:w-5 max-1400:h-5" /> Oceń Przedmiot
                   Wypożyczenia
                 </ActionButton>
               </div>
@@ -79,7 +79,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                 className="mt-2.5"
               />
 
-              <div className="mt-5 grid grid-cols-2 gap-6">
+              <div className="mt-5 grid grid-cols-2 gap-6 max-620:grid-cols-1 max-620:gap-[6px]">
                 <div className="space-y-2">
                   <FieldLabel>Odbiór</FieldLabel>
                   <DataField>{rental.reception__address}</DataField>
@@ -96,7 +96,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                     <DataField className="grow rounded-r-none text-black">
                       {rental.pickup_date}
                     </DataField>
-                    <DataField className="w-[92px] rounded-l-none text-black ml-[-2px]">
+                    <DataField className="w-[92px] rounded-l-none text-black ml-[-2px] max-1400:w-[70px]">
                       {rental.pickup_time}
                     </DataField>
                   </div>
@@ -108,7 +108,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                     <DataField className="grow rounded-r-none text-black">
                       {rental.return_date}
                     </DataField>
-                    <DataField className="w-[92px] rounded-l-none text-black ml-[-2px]">
+                    <DataField className="w-[92px] rounded-l-none text-black ml-[-2px] max-1400:w-[70px]">
                       {rental.return_time}
                     </DataField>
                   </div>
@@ -124,7 +124,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                   <DataField className="grow rounded-r-none text-black">
                     Wartość wypożyczenia
                   </DataField>
-                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px]">
+                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px] max-1400:min-w-[170px]">
                     {rental.price_per_day}*{rental.rent_days} dni=
                     {rental.total_price}
                   </DataField>
@@ -134,7 +134,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                   <DataField className="grow rounded-r-none text-black">
                     Kaucja (zwrotna przy oddaniu)
                   </DataField>
-                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px]">
+                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px] max-1400:min-w-[170px]">
                     {rental.deposit_price}
                   </DataField>
                 </div>
@@ -143,7 +143,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
                   <DataField className="grow rounded-r-none text-black">
                     Suma do zapłaty
                   </DataField>
-                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px]">
+                  <DataField className="min-w-[192px] rounded-l-none text-black ml-[-2px] max-1400:min-w-[170px]">
                     {rental.final_price}
                   </DataField>
                 </div>
@@ -160,7 +160,7 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
             </div>
           </div>
 
-          <div className="w-1/2">
+          <div className="w-1/2 max-1250:w-full">
             <div>
               <SectionTitle title="Dane wynajmującego" />
 
@@ -195,11 +195,11 @@ const RentalsInfo = ({ className, rentalsData, hideLenderDetails }) => {
 
             <div className="mt-6 space-y-2">
               <ActionButton>
-                <MessageIcon className="fill-rhythm" /> Napisz do właściciela
+                <MessageIcon className="fill-rhythm max-1400:w-5 max-1400:h-5" /> Napisz do właściciela
               </ActionButton>
 
               <ActionButton>
-                <StarIcon className="stroke-rhythm" /> Oceń Współpracę z
+                <StarIcon className="stroke-rhythm max-1400:w-5 max-1400:h-5" /> Oceń Współpracę z
                 Wypożyczającym
               </ActionButton>
             </div>

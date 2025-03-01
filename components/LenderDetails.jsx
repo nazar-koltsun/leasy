@@ -11,19 +11,19 @@ const LenderDetails = ({ lenderData, hideLenderDetails }) => {
     <div className="text-chineseBlack">
       <DashboardPageTitle title="Wypożyczenia - Szczegóły" className="mt-2.5" />
 
-      <div className="pl-4 mt-8">
+      <div className="pl-4 mt-8 max-1024:pl-0">
         <p>
           {`Ogłoszenie > ${lenderData.product} > Potwierdź Wypożyczenie > Wypożyczenie ${lenderData.number}`}
         </p>
 
-        <div className="mt-2 flex items-center gap-5 uppercase">
-          <h2 className="font-bold text-[28px] leading-10">
+        <div className="mt-2 flex items-start gap-5 uppercase">
+          <h2 className="font-bold text-[28px] leading-10 max-700:text-xl">
             Potwierdzenie Wypożyczenia {lenderData.number}
           </h2>
 
           <span
             className={cn(
-              'text-[12px] uppercase p-1 px-2.5 text-center rounded-[20px] font-bold',
+              'block mt-2 text-[12px] uppercase p-1 px-2.5 text-center rounded-[20px] font-bold',
               lenderData.status === 'Zakończono' &&
                 'text-philippineGreen bg-magicMint',
               lenderData.status === 'Anulowane' &&
@@ -36,10 +36,10 @@ const LenderDetails = ({ lenderData, hideLenderDetails }) => {
           </span>
         </div>
 
-        <div className="mt-4 flex items-center gap-10">
+        <div className="mt-4 flex items-center gap-10 max-700:flex-col max-700:items-start max-700:gap-1">
           <p>Data złożenia zamówienia: {lenderData.order_date}</p>
-          <Button variant="flat" className="text-sm font-normal gap-1">
-            <DangerIcon /> Zgłoś problem z zamówieniem do Leasy
+          <Button variant="flat" className="text-sm font-normal gap-2 items-start text-left">
+            <DangerIcon className='mt-0.5' /> Zgłoś problem z zamówieniem do Leasy
           </Button>
         </div>
 

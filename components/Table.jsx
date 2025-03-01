@@ -15,8 +15,6 @@ const Table = ({ data, className, showLenderDetails }) => {
   ))
   const [actionPopups, setActionPopups] = useState(initialActionPopups);
 
-  console.log('actionPopups', actionPopups);
-
   const toggleActionPopup = (index) => {
     const newActionPopups = actionPopups.map((popup, i) => {
       if (i === index) {

@@ -9,7 +9,7 @@ import ShareIcon from '@/components/icons/ShareIcon';
 
 const LenderInfoCard = ({ lenderData, className }) => {
   return (
-    <Card className={cn('w-[520px] max-w-full pb-9 pt-14 text-chineseBlack', className)}>
+    <Card className={cn('w-[520px] max-w-full pb-9 pt-14 text-chineseBlack max-700:pb-4 max-700:pt-5 max-700:px-4 max-620:w-full', className)}>
       <h2 className="text-2xl font-bold capitalize">Informacje o Wypożyczającym</h2>
 
       <div className="mt-5 flex items-center gap-6">
@@ -47,12 +47,12 @@ const LenderInfoCard = ({ lenderData, className }) => {
         </p>
       </div>
 
-      <div className="mt-10 flex gap-5">
-        <Button className="min-w-[170px]">Wyślij wiadomość</Button>
+      <div className="mt-10 flex gap-5 max-620:flex-wrap">
+        <Button className="min-w-[170px] max-700:grow">Wyślij wiadomość</Button>
         <Button className="w-[52px] h-[52px] rounded-full bg-antiFlashWhite hover:bg-[#d0d0d0]">
           <ShareIcon />
         </Button>
-        <Button variant="bordered" className="ml-auto border-chineseBlack px-5 min-w-[148px] font-bold hover:opacity-50">Dodaj opinie</Button>
+        <Button variant="bordered" className="ml-auto border-chineseBlack px-5 min-w-[148px] font-bold hover:opacity-50 max-700:w-full">Dodaj opinie</Button>
       </div>
     </Card>
   )
