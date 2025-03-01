@@ -52,7 +52,7 @@ const LenderInfoCard = ({ lenderData, className }) => {
         <Button className="w-[52px] h-[52px] rounded-full bg-antiFlashWhite hover:bg-[#d0d0d0]">
           <ShareIcon />
         </Button>
-        <Button variant="bordered" className="ml-auto border-chineseBlack px-5 min-w-[148px] font-bold">Dodaj opinie</Button>
+        <Button variant="bordered" className="ml-auto border-chineseBlack px-5 min-w-[148px] font-bold hover:opacity-50">Dodaj opinie</Button>
       </div>
     </Card>
   )

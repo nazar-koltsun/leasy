@@ -32,6 +32,9 @@ const config = {
         bostonUniversityRed: "var(--boston-university-red)",
         blanchedAlmond: "var(--blanched-almond)",
         windsorTan: "var(--windsor-tan)",
+        richBlack: "var(--rich-black)",
+        darkLiver: "var(--dark-liver)",
+        charlestonGreen: "var(--charleston-green)",
       },
       screens: {
         'max-1250': { max: '1250px' },

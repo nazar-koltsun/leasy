@@ -2,10 +2,11 @@ import { cn } from '@/lib/utils';
 import DashboardPageTitle from '@/components/DashboardPageTitle';
 import Button from '@/components/Button';
 import LenderInfoCard from '@/components/LenderInfoCard';
+import RentalsInfo from '@/components/RentalsInfo';
 
 import DangerIcon from '@/components/icons/DangerIcon';
 
-const LenderDetails = ({ lenderData }) => {
+const LenderDetails = ({ lenderData, hideLenderDetails }) => {
   return (
     <div className="text-chineseBlack">
       <DashboardPageTitle title="Wypożyczenia - Szczegóły" className="mt-2.5" />
@@ -35,15 +36,17 @@ const LenderDetails = ({ lenderData }) => {
           </span>
         </div>
 
-        <div className='mt-4 flex items-center gap-10'>
+        <div className="mt-4 flex items-center gap-10">
           <p>Data złożenia zamówienia: {lenderData.order_date}</p>
-          <Button variant='flat' className='text-sm font-normal gap-1'>
+          <Button variant="flat" className="text-sm font-normal gap-1">
             <DangerIcon /> Zgłoś problem z zamówieniem do Leasy
           </Button>
-        </div> 
-      </div>
+        </div>
 
-      <LenderInfoCard lenderData={lenderData.lender} className='mt-8' />
+        <LenderInfoCard lenderData={lenderData.lender} className="mt-8" />
+
+        <RentalsInfo className="mt-8" rentalsData={lenderData} hideLenderDetails={hideLenderDetails} />
+      </div>
     </div>
   );
 };
