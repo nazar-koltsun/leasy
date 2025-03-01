@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 import MessageIcon from '@/components/icons/MessageIcon';
 import FocusIcon from '@/components/icons/FocusIcon';
 
-const RowItemActionPopup = ({ isLast }) => {
+const RowItemActionPopup = ({ isLast, showLenderDetails }) => {
   const baseBtnsClasses =
     'gap-1 text-sm leading-6 font-normal text-chineseBlack';
 
@@ -19,7 +19,7 @@ const RowItemActionPopup = ({ isLast }) => {
         Właściciela
       </Button>
 
-      <Button variant="flat" className={baseBtnsClasses}>
+      <Button variant="flat" className={baseBtnsClasses} onClick={showLenderDetails}>
         <FocusIcon /> Zobacz szczegóły
       </Button>
     </div>

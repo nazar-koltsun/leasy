@@ -1,7 +1,11 @@
+'use client';
+
+import { useState } from 'react';
 import DashboardPageTitle from '@/components/DashboardPageTitle';
 import SearchInput from '@/components/SearchInput';
 import Table from '@/components/Table';
 import Pagination from '@/components/Pagination';
+import LenderDetails from '@/components/LenderDetails';
 
 import AvatarOne from '@/assets/avatars/avatar-1.png';
 import AvatarTwo from '@/assets/avatars/avatar-2.png';
@@ -126,7 +130,27 @@ const RENTALS_DATA = [
   },
 ];
 
+const LENDER_DATA = {
+  number: '#256717',
+  product: 'SPORT CRUISER',
+  status: 'Zakończono',
+  order_date: '07.10.2024',
+}
+
 const DashboardMainPage = () => {
+  const [isLenderDetailsVisible, setIsLenderDetailsVisible] = useState(false);
+
+  const showLenderDetails = () => {
+    window.scrollTo({top: 0});
+    setIsLenderDetailsVisible(true);
+  }
+
+  if(isLenderDetailsVisible) {
+    return (
+      <LenderDetails lenderData={LENDER_DATA} />
+    )
+  }
+
   return (
     <div>
       <div className='flex justify-between items-center gap-4'>
@@ -135,7 +159,7 @@ const DashboardMainPage = () => {
         <SearchInput id="search-rentals" placeholder="Szukaj..." className='w-[260px]' />
       </div>
 
-      <Table data={RENTALS_DATA} className='mt-4' />
+      <Table data={RENTALS_DATA} className='mt-4' showLenderDetails={showLenderDetails} />
 
       <Pagination totalItems={20} className='mt-8' />
     </div>

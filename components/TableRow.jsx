@@ -6,7 +6,7 @@ import RowItemActionPopup from '@/components/RowItemActionPopup';
 
 import EditDotsIcon from '@/components/icons/EditDotsIcon';
 
-const TableRow = ({ rowData, index, isLast, isActionPopupVisible, toggleActionPopup}) => {
+const TableRow = ({ rowData, index, isLast, isActionPopupVisible, toggleActionPopup, showLenderDetails}) => {
   const basicTdClasses = 'py-4 px-[15px] text-left';
 
   return (
@@ -57,7 +57,7 @@ const TableRow = ({ rowData, index, isLast, isActionPopupVisible, toggleActionPo
           >
             <EditDotsIcon className='group-hover:fill-green transition duration-300 ease-in-out' />
           </Button>
-          {isActionPopupVisible && <RowItemActionPopup isLast={isLast} />}
+          {isActionPopupVisible && <RowItemActionPopup isLast={isLast} showLenderDetails={showLenderDetails} />}
         </div>
       </td>
     </tr>

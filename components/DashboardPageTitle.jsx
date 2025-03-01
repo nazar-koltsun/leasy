@@ -1,6 +1,10 @@
-const DashboardPageTitle = ({title}) => {
+import { cn } from "@/lib/utils";
+
+const DashboardPageTitle = ({title, className}) => {
   return (
-    <h1 className="text-xl font-bold text-chineseBlack">{title}</h1>
+    <h1 className={cn("text-xl font-bold text-chineseBlack", className)}>
+      {title}
+    </h1>
   )
 }
 

@@ -7,7 +7,7 @@ import TableRow from '@/components/TableRow';
 import TableCheckBox from '@/components/TableCheckBox';
 import ArrowDownIcon from '@/components/icons/ArrowDownIcon';
 
-const Table = ({ data, className }) => {
+const Table = ({ data, className, showLenderDetails }) => {
   const initialActionPopups = data.map(() => (
     {
       isOpen: false,
@@ -77,6 +77,7 @@ const Table = ({ data, className }) => {
               isLast={rowIndex === data.length - 1} 
               isActionPopupVisible={actionPopups[rowIndex].isOpen} 
               toggleActionPopup={toggleActionPopup}
+              showLenderDetails={showLenderDetails}
             />
           ))}
         </tbody>
