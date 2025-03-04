@@ -50,7 +50,7 @@ const Header = ({ isDashboard = false, className }) => {
   return (
     <header
       className={cn(
-        'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-col',
+        'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-wrap max-700:justify-center max-700:gap-4',
         isNavOpen && 'z-50',
         className
       )}
@@ -60,7 +60,7 @@ const Header = ({ isDashboard = false, className }) => {
         {isDashboard && <DashboardLogo />}
       </div>
 
-      <HeaderNav isOpen={isNavOpen} onClose={closeNav} className={cn('hidden', showNavOnDesktop && 'block',  isNavOpen && 'block')} />
+      <HeaderNav isOpen={isNavOpen} onClose={closeNav} className={cn('hidden', showNavOnDesktop && 'block max-1024:hidden',  isNavOpen && 'block max-1024:block')} />
 
       {!showNavOnDesktop && (
         <SearchInput
@@ -74,7 +74,7 @@ const Header = ({ isDashboard = false, className }) => {
 
       <div
         className={cn(
-          'flex gap-3 items-center order-3 max-700:mt-4 max-620:gap-3',
+          'flex gap-3 items-center order-3 max-620:gap-3',
           isAuth && 'gap-5'
         )}
       >
@@ -90,7 +90,7 @@ const Header = ({ isDashboard = false, className }) => {
             'group transition duration-300 ease-in-out',
             flatBtnBaseClasses,
             !isAuth && 'mr-2',
-            showNavOnDesktop && 'hidden'
+            showNavOnDesktop && 'hidden max-1024:block'
           )}
           onClick={openNav}
         >
