@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
@@ -29,16 +30,28 @@ const DashboardLogo = () => (
 );
 
 const Header = ({ isDashboard = false, className }) => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const flatBtnBaseClasses = 'w-8 h-8 flex items-center justify-center';
 
   const pathname = usePathname();
   const showNavOnDesktop = SHOW_DESKTOP_NAV_ROUTES.includes(pathname);
   const isAuth = SHOW_IS_AUTH_ROUTES.includes(pathname);
 
+  const openNav = () => {
+    setIsNavOpen(true);
+    document.body.style.overflow = 'hidden';
+  };
+
+  const closeNav = () => {
+    setIsNavOpen(false);
+    document.body.style.overflow = 'unset';
+  };
+
   return (
     <header
       className={cn(
         'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-col',
+        isNavOpen && 'z-50',
         className
       )}
     >
@@ -47,7 +60,7 @@ const Header = ({ isDashboard = false, className }) => {
         {isDashboard && <DashboardLogo />}
       </div>
 
-      <HeaderNav className={cn('hidden', showNavOnDesktop && 'block')} />
+      <HeaderNav isOpen={isNavOpen} onClose={closeNav} className={cn('hidden', showNavOnDesktop && 'block',  isNavOpen && 'block')} />
 
       {!showNavOnDesktop && (
         <SearchInput
@@ -79,6 +92,7 @@ const Header = ({ isDashboard = false, className }) => {
             !isAuth && 'mr-2',
             showNavOnDesktop && 'hidden'
           )}
+          onClick={openNav}
         >
           <BurgerIcon className="group-hover:fill-[#0d7a50]" />
         </Button>
@@ -133,6 +147,13 @@ const Header = ({ isDashboard = false, className }) => {
           </>
         )}
       </div>
+      <div
+        className={cn(
+          'hidden fixed z-30 top-0 right-0 bottom-0 w-full left-0 bg-black opacity-50',
+          isNavOpen && 'block'
+        )}
+        onClick={() => closeNav()}
+      ></div>
     </header>
   );
 };
