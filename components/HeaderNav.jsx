@@ -87,7 +87,7 @@ const HeaderNav = ({ isOpen, onClose, className }) => {
       className={cn(
         'order-2 ml-auto mr-9',
         isOpen &&
-          'pt-10 fixed z-40 bg-white top-0 right-0 mr-0 h-screen bg-green shadow-2xl',
+          'pt-10 fixed z-40 bg-white top-0 right-0 mr-0 h-screen bg-green shadow-2xl overflow-auto',
         className
       )}
     >
