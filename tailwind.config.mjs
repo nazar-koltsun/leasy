@@ -35,6 +35,7 @@ const config = {
         richBlack: "var(--rich-black)",
         darkLiver: "var(--dark-liver)",
         charlestonGreen: "var(--charleston-green)",
+        raisinBlack: "var(--raisin-black)",
       },
       screens: {
         'max-1400': { max: '1400px' },

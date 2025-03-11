@@ -1,5 +1,11 @@
-export default function Home() {
+import RentFormSection from '@/components/pages/homepage/sections/RentFormSection';
+
+const HomePage = () => {
   return (
-    <div className="text-[var(--font-geist-sans)]">Homepage</div>  
+    <>
+      <RentFormSection />
+    </>  
   );
 }
+
+export default HomePage;
