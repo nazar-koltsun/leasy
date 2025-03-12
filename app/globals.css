@@ -13,6 +13,7 @@
   --dark-slate-gray: #3b505a;
   --bright-gray: #e5e7eb;
   --blanched-almond: #ffefcf;
+  --cultured: #F5F5F5;
   --green: #15a46d;
   --magic-mint: #b9f9cf;
   --castleton-green: #075a39;
@@ -26,6 +27,7 @@
   --rich-black: #020202;
   --raisin-black: #222222;
   --dark-liver: #4f4f4f;
+  --independence: #4b5563;
 }
 
 input[type='checkbox'] {
