@@ -48,7 +48,7 @@ const CATEGORIES_DATA = [
   },
 ];
 
-const MainCategoriesSections = () => {
+const MainCategoriesSection = () => {
   const {glideRef, prevRef, nextRef, activeIndex} = useMobileCarousel();
 
   return (
@@ -127,4 +127,4 @@ const MainCategoriesSections = () => {
   );
 };
 
-export default MainCategoriesSections;
+export default MainCategoriesSection;

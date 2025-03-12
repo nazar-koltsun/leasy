@@ -1,11 +1,11 @@
 import RentFormSection from '@/components/pages/homepage/sections/RentFormSection';
-import MainCategoriesSections from '@/components/pages/homepage/sections/MainCategoriesSections';
+import MainCategoriesSection from '@/components/pages/homepage/sections/MainCategoriesSection';
 
 const HomePage = () => {
   return (
     <>
       <RentFormSection />
-      <MainCategoriesSections />
+      <MainCategoriesSection />
     </>  
   );
 }
