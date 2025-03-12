@@ -23,7 +23,7 @@ const RentFormSection = () => {
   };
 
   return (
-    <div className="relative pt-[53px] pb-[51px] px-16 max-620:px-6 max-620:py-8">
+    <section className="relative pt-[53px] pb-[51px] px-16 max-620:px-6 max-620:py-8 bg-auroMetal">
       <Card className="p-9 relative z-10 w-[460px] max-w-full text-chineseBlack max-768:mx-auto max-620:p-4">
         <p className="text-xl max-620:text-lg">Sprawdź, co możesz wypożyczyć</p>
 
@@ -78,7 +78,7 @@ const RentFormSection = () => {
           className="absolute left-0 top-0 w-full h-full object-cover object-bottom"
         />
       </picture>
-    </div>
+    </section>
   );
 };
 
