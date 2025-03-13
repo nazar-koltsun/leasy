@@ -4,6 +4,7 @@ import HowToStepsSection from '@/components/pages/homepage/sections/HowToStepsSe
 import NewProductsSection from '@/components/pages/homepage/sections/NewProductsSection';
 import DownloadApplicationSection from '@/components/general-sections/DownloadApplicationSection';
 import ClientsReviewsSection from '@/components/general-sections/ClientsReviewsSection';
+import CreateAccountPromoSection from '@/components/general-sections/CreateAccountPromoSection';
 
 const HomePage = () => {
   return (
@@ -14,6 +15,7 @@ const HomePage = () => {
       <NewProductsSection />
       <DownloadApplicationSection />
       <ClientsReviewsSection />
+      <CreateAccountPromoSection />
     </>  
   );
 }

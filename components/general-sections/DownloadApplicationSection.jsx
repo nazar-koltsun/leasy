@@ -7,7 +7,7 @@ import AppleStoreBigIcon from '@/components/icons/AppleStoreBigIcon';
 const DownloadApplicationSection = () => {
   return (
     <section className="relative mx-7 pl-[80px] pb-16 pt-[26px] pr-9 flex justify-between items-start min-h-[324px] gap-5 bg-[#038DB1] rounded-2xl overflow-hidden max-768:pl-10 max-768:pr-4 max-768:pb-8 max-768:min-h-[280px] max-620:mx-4 max-620:px-4 max-620:flex-col-reverse max-620:gap-2">
-      <div className="self-end relative z-10 w-[500px] max-w-full text-lotion">
+      <div className="self-end relative z-10 w-[500px] max-w-full text-lotion max-620:w-full">
         <h2
           className="text-3xl font-bold"
           style={{ textShadow: '1px 1px 0 black' }}

@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         )}
       >
         <Header />
-        <main className='mb-16'>{children}</main>
+        <main className='mb-8'>{children}</main>
         <Footer />
       </body>
     </html>
