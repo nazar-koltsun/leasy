@@ -24,7 +24,9 @@ const StarsRating = ({rating, reviewsCount, className}) => {
         </div>
       </div>
 
-      <span>({reviewsCount})</span>
+      {reviewsCount && (
+        <span>({reviewsCount})</span>
+      )}
     </div>
   )
 } 

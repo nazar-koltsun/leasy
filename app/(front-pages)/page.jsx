@@ -2,7 +2,8 @@ import RentFormSection from '@/components/pages/homepage/sections/RentFormSectio
 import MainCategoriesSection from '@/components/pages/homepage/sections/MainCategoriesSection';
 import HowToStepsSection from '@/components/pages/homepage/sections/HowToStepsSection';
 import NewProductsSection from '@/components/pages/homepage/sections/NewProductsSection';
-import DownloadApplicationSection from '@/components/general-sections/ DownloadApplicationSection';
+import DownloadApplicationSection from '@/components/general-sections/DownloadApplicationSection';
+import ClientsReviewsSection from '@/components/general-sections/ClientsReviewsSection';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <HowToStepsSection />
       <NewProductsSection />
       <DownloadApplicationSection />
+      <ClientsReviewsSection />
     </>  
   );
 }

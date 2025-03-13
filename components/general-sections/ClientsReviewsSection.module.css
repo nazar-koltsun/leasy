@@ -1,0 +1,13 @@
+.glide {
+  margin-top: 24px;
+}
+
+.glideSlides {
+  white-space: initial;
+}
+
+@media (max-width: 1024) {
+  .glide {
+    margin-top: 21px;
+  }
+}
