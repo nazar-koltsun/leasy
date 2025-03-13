@@ -52,7 +52,7 @@ const MainCategoriesSection = () => {
   const {glideRef, prevRef, nextRef, activeIndex} = useMobileCarousel();
 
   return (
-    <section className="p-7 flex flex-col max-620:px-4">
+    <section className="px-7 py-8 flex flex-col max-620:px-4">
       <SectionTitle>Główne kategorie</SectionTitle>
       <p className="mt-2 text-raisinBlack capitalize">
         Przeglądaj naszą szeroką ofertę sprzętu z różnych kategorii
