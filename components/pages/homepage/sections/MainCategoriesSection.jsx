@@ -119,7 +119,7 @@ const MainCategoriesSection = () => {
 
       <Button
         path="/categories"
-        className="inline-flex mx-auto mt-7 min-w-[204px] min-h-[60px]"
+        className="inline-flex mx-auto mt-7 min-w-[204px] min-h-[60px] uppercase rounded-xl"
       >
         Zobacz więcej
       </Button>

@@ -2,6 +2,7 @@
 
 import ProductCard from '@/components/ProductCard';
 import SectionTitle from '@/components/pages/SectionTitle';
+import Button from '@/components/Button';
 
 import ProductImage1 from '@/assets/products/product_image1.png';
 import ProductImage2 from '@/assets/products/product_image2.png';
@@ -119,6 +120,13 @@ const NewProductsSection = () => {
           </li>
         ))}
       </ul>
+
+      <Button
+        path="/products"
+        className="inline-flex mx-auto mt-10 min-w-[204px] min-h-[60px] uppercase rounded-xl"
+      >
+        Zobacz więcej
+      </Button>
     </section>
   );
 };
