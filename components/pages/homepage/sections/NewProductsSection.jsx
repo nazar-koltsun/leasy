@@ -105,9 +105,8 @@ const PRODUCTS_DATA = [
 ];
 
 const NewProductsSection = () => {
-
   return (
-    <section className="px-7 py-8 flex flex-col max-620:p-4">
+    <section className="px-7 py-8 flex flex-col max-620:px-4">
       <SectionTitle>Nowo dodane</SectionTitle>
       <p className="mt-2 text-raisinBlack capitalize">
         Przeglądaj nowo dodane ogłoszenia

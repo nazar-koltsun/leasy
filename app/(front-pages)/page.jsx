@@ -2,6 +2,7 @@ import RentFormSection from '@/components/pages/homepage/sections/RentFormSectio
 import MainCategoriesSection from '@/components/pages/homepage/sections/MainCategoriesSection';
 import HowToStepsSection from '@/components/pages/homepage/sections/HowToStepsSection';
 import NewProductsSection from '@/components/pages/homepage/sections/NewProductsSection';
+import DownloadApplicationSection from '@/components/general-sections/ DownloadApplicationSection';
 
 const HomePage = () => {
   return (
@@ -10,6 +11,7 @@ const HomePage = () => {
       <MainCategoriesSection />
       <HowToStepsSection />
       <NewProductsSection />
+      <DownloadApplicationSection />
     </>  
   );
 }
