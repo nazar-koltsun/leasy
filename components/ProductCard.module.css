@@ -33,3 +33,8 @@
     opacity: 1 !important;
   }
 }
+
+.glideTrack,
+.glideSlides {
+  height: 100%;
+}

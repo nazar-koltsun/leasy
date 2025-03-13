@@ -45,6 +45,7 @@ const config = {
         'max-1180': { max: '1180px' },
         'max-1100': { max: '1100px' },
         'max-1024': { max: '1024px' },
+        'max-840': { max: '840px' },
         'max-768': { max: '768px' },
         'max-700': { max: '700px' },
         'max-620': { max: '620px' },

@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
   const [activeSlide, setActiveSlide] = useState(0);
   const glideRef = useRef(null);
   const glideInstanceRef = useRef(null);
-  const [isInWishList, setIsInWishclassName] = useState(product.isInWishList);
+  const [isInWishList, setIsInWishclassName] = useState(product.isInWishlist);
 
   const toggleIsInWishList = () => {
     setIsInWishclassName((prevValue) => !prevValue);
@@ -47,15 +47,15 @@ const ProductCard = ({ product }) => {
   }, []);
 
   return (
-    <div className="w-[320px]">
+    <div className="w-full h-full flex flex-col">
       <div
         ref={glideRef}
-        className="relative h-[236px] rounded-xl overflow-hidden"
+        className="relative h-[236px] rounded-xl overflow-hidden max-620:h-[180px]"
       >
-        <div className="glide__track" data-glide-el="track">
-          <div className="glide__slides">
+        <div className={cn("glide__track", styles.glideTrack)} data-glide-el="track">
+          <div className={cn("glide__slides", styles.glideSlides)}>
             {product.images.map((image, index) => (
-              <Image key={index} src={image} alt="" />
+              <Image key={index} src={image} alt="" className='w-full h-full object-cover' />
             ))}
           </div>
         </div>
@@ -91,16 +91,17 @@ const ProductCard = ({ product }) => {
         </div>
       </div>
 
-      <div className="mt-3">
-        <div className='flex justify-between gap-4 text-chineseBlack'>
+      <div className="mt-3 flex flex-col grow">
+        <div className='flex flex-wrap justify-between gap-x-4 text-chineseBlack'>
           <h3 className='font-bold'>{product.title}</h3>
           <StarsRating rating={product.rating} reviewsCount={product.reviewsCount} />
         </div>
         <p className='mt-1'>{product.description}</p>
-        <p className='mt-1 text-independence'>{product.location}</p>
-        <div className='mt-1 flex gap-4 justify-between items-end'>
+        <p className='mt-1 mb-1 text-independence'>{product.location}</p>
+
+        <div className='flex gap-4 justify-between items-end mt-auto max-620:flex-col max-620:items-start max-620:gap-2'>
           <p className='text-lg font-bold'>{product.price_per_day} <span className='text-base text-independence font-normal'>/dzień</span></p>
-          <Button path='/rent' className='py-1 rounded-lg text-lotion'>Wypożycz</Button>
+          <Button path='/rent' className='py-1 rounded-lg text-lotion max-620:w-full'>Wypożycz</Button>
         </div>
       </div>
     </div>
