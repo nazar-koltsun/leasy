@@ -23,7 +23,7 @@ const SHOW_DESKTOP_NAV_ROUTES = ['/'];
 const SHOW_IS_AUTH_ROUTES = ['/', '/dashboard'];
 
 const DashboardLogo = () => (
-  <div className="flex items-center gap-3">
+  <div className="flex items-center gap-3 max-700:hidden">
     <GraphIcon />
     <span className="text-chineseBlack text-lg font-bold">Dashboard</span>
   </div>
@@ -47,20 +47,37 @@ const Header = ({ isDashboard = false, className }) => {
     document.body.style.overflow = 'unset';
   };
 
+  const mobileBtnsClasses = 'max-700:text-xs max-700:py-2 max-700:px-1 max-700:gap-1';
+
   return (
     <header
       className={cn(
-        'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-wrap max-700:justify-center max-700:gap-4',
+        'relative z-40 bg-white p-4 flex justify-between items-center max-1100:flex-wrap max-700:flex-wrap max-700:gap-4',
         isNavOpen && 'z-50',
         className
       )}
     >
       <div className="order-1 flex items-center gap-5">
-        <Image src={Logo} width={145} height={54} priority alt="Logo" />
+        <Image
+          src={Logo}
+          width={145}
+          height={54}
+          priority
+          alt="Logo"
+          className="max-700:w-[100px]"
+        />
         {isDashboard && <DashboardLogo />}
       </div>
 
-      <HeaderNav isOpen={isNavOpen} onClose={closeNav} className={cn('hidden', showNavOnDesktop && 'block max-1024:hidden',  isNavOpen && 'block max-1024:block')} />
+      <HeaderNav
+        isOpen={isNavOpen}
+        onClose={closeNav}
+        className={cn(
+          'hidden',
+          showNavOnDesktop && 'block max-1024:hidden',
+          isNavOpen && 'block max-1024:block'
+        )}
+      />
 
       {!showNavOnDesktop && (
         <SearchInput
@@ -74,13 +91,13 @@ const Header = ({ isDashboard = false, className }) => {
 
       <div
         className={cn(
-          'flex gap-3 items-center order-3 max-620:gap-3',
+          'flex gap-3 items-center order-3 max-700:gap-1',
           isAuth && 'gap-5'
         )}
       >
         {isDashboard && (
-          <Button variant="secondary" className="font-firaSans font-medium">
-            <PlusCircleIcon /> Dodaj ogłoszenie
+          <Button variant="secondary" className={cn("font-firaSans font-medium", mobileBtnsClasses)}>
+            <PlusCircleIcon className='w-3 h-3' /> Dodaj ogłoszenie
           </Button>
         )}
 
@@ -89,8 +106,8 @@ const Header = ({ isDashboard = false, className }) => {
           className={cn(
             'group transition duration-300 ease-in-out',
             flatBtnBaseClasses,
-            !isAuth && 'mr-2',
-            showNavOnDesktop && 'hidden max-1024:block'
+            !isAuth && 'mr-2 max-700:mr-0',
+            showNavOnDesktop && 'hidden max-1024:flex',
           )}
           onClick={openNav}
         >
@@ -99,17 +116,17 @@ const Header = ({ isDashboard = false, className }) => {
 
         {!isAuth && (
           <>
-            <Button path={'/login'} className="px-3 font-firaSans">
-              <UserIcon />
+            <Button path={'/login'} className={cn("px-3 font-firaSans", mobileBtnsClasses)}>
+              <UserIcon className='max-700:w-3' />
               Zaloguj się
             </Button>
 
             <Button
               path={'/logup'}
               variant="secondary"
-              className="px-3 font-firaSans"
+              className={cn("px-3 font-firaSans", mobileBtnsClasses)}
             >
-              <LockIcon />
+              <LockIcon className='max-700:w-3' />
               Zarejestruj
             </Button>
           </>
@@ -129,13 +146,13 @@ const Header = ({ isDashboard = false, className }) => {
           <>
             <Button
               className="group relative w-12 h-12 p-0 rounded-full bg-transparent border border-[#ddd] 
-            hover:bg-transparent shadow-doobleSmallShadow"
+            hover:bg-transparent shadow-doobleSmallShadow max-700:w-8 max-700:h-8"
             >
               <Image
                 src={UserPhoto}
                 alt="User photo"
                 className="absolute left-1/2 top-1/2 
-              -translate-x-1/2 -translate-y-1/2 w-10 h-10"
+              -translate-x-1/2 -translate-y-1/2 w-10 h-10 max-700:w-7 max-700:h-7"
               />
 
               <div
